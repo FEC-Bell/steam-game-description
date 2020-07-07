@@ -36,7 +36,7 @@ describe('Data generation utils', () => {
       expect(resultObj.id_publisher).toBeGreaterThanOrEqual(1);
       expect(resultObj.id_publisher).toBeLessThanOrEqual(20);
       expect(resultObj.id_platform).toBeGreaterThanOrEqual(1);
-      expect(resultObj.id_platform).toBeLessThanOrEqual(20);
+      expect(resultObj.id_platform).toBeLessThanOrEqual(3);
     });
   });
 });
