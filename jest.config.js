@@ -24,7 +24,10 @@ module.exports = {
     '!**/*file.js', // knexfile.js config
     '!**/*.config.js', // webpack.config.js, jest.config.js
     '!**/knex.js', // db/knex.js
-    '!.eslintrc.js'
+    '!.eslintrc.js',
+    '!**/GlobalStyle.js', // styled-components tested method
+    '!**/*.styles.js', // pure styled components. Not testing styles in these tests unless relevant (i.e. something that should be hidden, etc.)
+    '!**/UIUXUtils.js' // same rationale as for *.styles.js
   ],
 
   // The directory where Jest should output its coverage files
