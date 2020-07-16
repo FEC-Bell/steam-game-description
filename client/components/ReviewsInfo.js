@@ -9,7 +9,7 @@ const ReviewsInfo = ({ reviewType, reviews }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const [reviewDisplay, setReviewDisplay] = useState('');
 
-  let message = `${reviews.percent}% of the ${reviews.total} user reviews ${reviewType === 'all' ? 'for this game' : 'in the last 30 days'} are ${reviews.summary.split(' ').slice(-1)[0].toLowerCase()}.`;
+  let message = `${reviews.percent}% of the ${reviews.total} user reviews ${reviewType === 'all' ? 'for this game' : 'in the last 30 days'} are ${reviews.summary ? reviews.summary.split(' ').slice(-1)[0].toLowerCase() : 'Mixed'}.`;
 
   useEffect(() => {
     if (windowSize.width > 940) {

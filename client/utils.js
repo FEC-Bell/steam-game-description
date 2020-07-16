@@ -88,7 +88,11 @@ export const fetchGamePhoto = (gameid) => {
     .then(resObj => {
       let validPhotoType = resObj.filter(obj => obj.mediaType === 'carouselPhoto');
       return validPhotoType.length ? validPhotoType[0] : {};
-    });
+    })
+    .catch(e => {
+      console.error(e);
+      return {};
+    })
 };
 
 /**
