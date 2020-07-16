@@ -8,6 +8,10 @@ const { getGameInfo } = require('../db/index');
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
+app.get('/app/:gameid', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
+});
+
 app.get('/api/description/:gameid', async (req, res) => {
   const { gameid } = req.params;
   if (gameid < 1 || gameid > 100) {

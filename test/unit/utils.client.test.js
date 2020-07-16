@@ -35,7 +35,7 @@ describe('React client util functions', () => {
       '09': 'Sep',
       '10': 'Oct',
       '11': 'Nov',
-      '12': 'Dev'
+      '12': 'Dec'
     };
     for (let i = 1; i <= 28; i++) {
       for (let j = 0; j < years.length; j++) {

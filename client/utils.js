@@ -19,7 +19,7 @@ export const getHumanReadableFromISO = (ISOString) => {
     '09': 'Sep',
     '10': 'Oct',
     '11': 'Nov',
-    '12': 'Dev'
+    '12': 'Dec'
   };
 
   return `${parseInt(ISOString.slice(8, 10))} ${months[ISOString.slice(5, 7)]}, ${ISOString.slice(0, 4)}`;
