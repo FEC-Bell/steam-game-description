@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { GlobalStyle } from '../styles/GlobalStyle';
 import { DescCol, ImgContainer, TextContainer, DescImg, Desc, DescStats, ReleaseDate } from '../styles/DescriptionModule.styles';
 import { Label } from '../styles/UIUXUtils';
 import { getHumanReadableFromISO, fetchGameInfo, fetchGamePhoto, fetchAllGameReviews, fetchRecentGameReviews } from '../utils';
@@ -67,7 +66,6 @@ const DescriptionModule = ({ gameid }) => {
 
   return (
     <React.Fragment>
-      <GlobalStyle />
       <DescCol>
         <ImgContainer>
           <DescImg src={gameThumbnail} alt="Game Thumbnail" />
