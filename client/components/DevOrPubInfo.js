@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Label } from '../styles/UIUXUtils';
 import { DevOrPub, CompanyWrapper, Company, MoreButton } from '../styles/DevOrPubInfo.styles';
@@ -22,7 +22,7 @@ const DevOrPubInfo = ({ label, companyArr }) => {
         width={windowSize.width}
       >
         {
-          companyArr.map((com, idx, arr) => (
+          companyArr.map((com, idx) => (
             <Company key={idx}>
               {com.company} ({com.platform})
             </Company>
