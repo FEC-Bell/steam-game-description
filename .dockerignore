@@ -2,3 +2,8 @@ node_modules
 npm-debug.log
 .env
 .git
+.circleci
+fec-engineering-journal
+test
+.eslintrc.js
+jest.config.js
