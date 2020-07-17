@@ -77,6 +77,7 @@ describe('<DescriptionModule /> integration tests', () => {
   test('more button disappears on click', async () => {
     render(<DescriptionModule gameid={1} />);
     let devBtn = await screen.findByTestId('developer-more-button');
+    expect(devBtn).toBeVisible();
     await waitFor(() => fireEvent.click(devBtn));
     expect(devBtn).not.toBeVisible();
 
