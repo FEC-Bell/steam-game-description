@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 # Environment variables to pass to node server
 ENV PORT=3005
 ENV NODE_ENV=development
-ENV PGDB_URI=postgresql://postgres:postgres@db:5432/steam_game_descriptions
+ENV PGDB_URI=postgresql://postgres:postgres@desc_db:5433/steam_game_descriptions
 
 COPY package*.json ./
 RUN npm install

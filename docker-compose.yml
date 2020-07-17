@@ -13,14 +13,14 @@ services:
     networks:
       - descriptions-network
     depends_on:
-      - db
+      - desc_db
     links:
-      - db
-    command: ./wait-for.sh db:5432 -- sh -c "npm run seed && exec node server/index.js"
+      - desc_db
+    command: ./wait-for.sh desc_db:5433 -- sh -c "npm run seed && exec node server/index.js"
 
-  db:
+  desc_db:
     image: postgres:12
-    container_name: db
+    container_name: desc_db
     restart: on-failure
     volumes:
       - pgdata:/var/lib/postgresql/data/
@@ -29,9 +29,10 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=steam_game_descriptions
     ports:
-      - '5432:5432'
+      - '5433:5433'
     networks:
       - descriptions-network
+    command: -p 5433
 
 networks:
   descriptions-network:
